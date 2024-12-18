@@ -1,0 +1,186 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	// background: color-bg(body); /* Fallback for when there is no custom background color defined. */
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+	width: 10px;               /* width of the entire scrollbar */
+	height: 6px;
+}
+  
+::-webkit-scrollbar-track {
+	background: transparent;        /* color of the tracking area */
+}
+  
+::-webkit-scrollbar-thumb {
+	background-color: color-bg(scroll);    /* color of the scroll thumb */
+	border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: color-bg(scroll-hover);
+}
+
+hr {
+	border: 0;
+	@include divider();
+	margin-top: $spacing--shared-v;
+	margin-bottom: $spacing--shared-v;
+}
+
+ul, ol {
+	margin-top: 0;
+	padding-left: $spacing--shared-h;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing--shared-v;
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li {
+
+	&:not(:last-child) {
+		margin-bottom: $spacing--shared-v / 2;
+	}
+}
+
+li > ul,
+li > ol {
+	margin-top: $spacing--shared-v / 2;
+	margin-bottom: 0;
+}
+
+dl {
+	margin-top: 0;
+	margin-bottom: $spacing--shared-v;
+}
+
+dt {
+	@include font-weight(strong);
+}
+
+dd {
+	margin-left: $spacing--shared-h;
+	margin-bottom: $spacing--shared-v;
+}
+
+img {
+	border-radius: $img-radius;
+}
+
+img,
+svg,
+video {
+	display: block;
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: $spacing--figure-v $spacing--figure-h; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+figcaption {
+	padding: $spacing--figcaption-v $spacing--figcaption-h;
+}
+
+// tables
+table {
+	@include font-size(table);
+	border-collapse: collapse;
+	margin-bottom: $spacing--shared-v;
+	width: 100%;
+}
+
+tr {
+	border-bottom: 1px solid color-border(divider);
+}
+
+th {
+	@include font-weight(strong);
+	text-align: left;
+}
+
+th,
+td {
+	padding: $spacing--table-cell-v $spacing--table-cell-h;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"]:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+input[type="checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: color(primary);
+}
+
+.modal-confirm {
+	justify-content: center;
+	text-align: center;
+
+	.button-group {
+		justify-content: center;
+	}
+}
+
+.invert-color  {
+
+	hr {
+		@include divider(false, inverse);
+	}
+
+	tr {
+		border-bottom: 1px solid color-border(divider-inverse);
+	}
+}

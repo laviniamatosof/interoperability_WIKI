@@ -1,0 +1,56 @@
+{
+  "name": "performance-testing-guide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "emailjs-com": "^2.6.4",
+    "html-react-parser": "^1.2.6",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.5.1",
+    "react-collapsible": "^2.8.3",
+    "react-confirm-alert": "^2.7.0",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-hook-form": "^7.3.6",
+    "react-icons": "^4.2.0",
+    "react-latex": "^2.0.0",
+    "react-responsive-carousel": "^3.2.18",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^2.4.0",
+    "react-scripts": "^3.4.1",
+    "react-scroll": "^1.8.2",
+    "react-tabs": "^3.2.0",
+    "react-to-print": "^2.12.4",
+    "react-toastify": "^7.0.4",
+    "surge": "^0.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cruip/open-react-template.git"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "publish": "npm run build && cd ./build/ && surge"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

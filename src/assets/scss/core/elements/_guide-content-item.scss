@@ -1,0 +1,59 @@
+.guide-content-item {
+    margin: 12px 12px !important;
+
+    .item-description {
+        display: flex;
+        margin-bottom: 12px;
+        h4 {
+            // margin: 0px;
+            display: inline-block;
+        }
+    
+        .button {
+            margin: auto;
+            margin-right: 0px;
+            height: unset;
+        }
+
+    }
+
+    .property-title {
+        font-weight: 600;
+    }
+
+    .Collapsible {
+        background: color-bg(bg-primary);
+        padding-top: 16px;
+        border-radius: 10px;
+
+        .Collapsible__trigger {
+            color: color(high-contrast);
+            cursor: pointer;
+            margin-left: 12px;
+        }
+
+        .Collapsible__contentOuter {
+            background: white;
+            margin-top: 16px;
+            padding: 0px 12px;
+        }
+        
+    }
+
+    .selected {
+        background: color-bg(bg-secondary) !important;
+    }
+
+    .notselected {
+        background: color-bg(bg-primary-light) !important;
+    }
+
+    .stepsList {
+        padding-left: 30px;
+        border: none;
+    }
+
+    a {
+        color: color(secondary-dark);
+    }
+}

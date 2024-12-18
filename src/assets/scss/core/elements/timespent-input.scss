@@ -1,0 +1,21 @@
+.timespent-input {
+
+    float: left;
+    margin-right: 12px;
+    
+    input {
+        width: unset !important;
+    }
+
+    input::placeholder {
+        color: color(input);
+    }
+
+    .form-input[disabled] {
+        background-color: color(low-contrast);
+    }
+
+    .form-hint {
+        margin-top: -24px !important;
+    }
+}
