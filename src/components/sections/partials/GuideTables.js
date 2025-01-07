@@ -110,7 +110,8 @@ const GuideTables = ({
                             </ul>
                         </TabPanel>
                         <TabPanel> {/* Impact */}
-                            <p className="alert" style={{ color: '#25282C' }}>Based on literature searches 18 IoT characteristics were identified that relate to performance. These characteristics are listed below along with their definitions. The characteristics that are present and important in the application to be evaluated should be selected. The number of selected characteristics will be used in the Cost Benefit calculation step.</p>
+                            <p className="alert" style={{ color: '#25282C' }}>Through a bibliographic analysis, it was possible to establish the relationship of 14 characteristics
+                                with Interoperability among the 28 identified for IoT. These characteristics are listed below along with their definitions. The characteristics that are present and important in the application to be evaluated should be selected. The number of selected characteristics will be used in the Cost Benefit calculation step.</p>
                             <ul>
                                 {ReportService.getIoTCharacteristics().map(renderIoTCharacteristics)}
                             </ul>

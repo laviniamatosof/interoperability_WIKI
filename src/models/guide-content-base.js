@@ -1147,98 +1147,26 @@ const iotCharacteristics = [
     {
         selected: false,
         impacted: false,
-        id: "understandability",
-        name: "Understandability",
-        type: "characteristics",
-        definition: "The degree to which data has attributes that enable it to be read and interpreted by users, and is expressed in appropriate languages, symbols, and units in a specific context of use."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "recoverability",
-        name: "Recoverability",
-        type: "characteristics",
-        definition: "The degree to which, in the event of interruption or failure, a product or system can recover the directly affected data and restore the desired state of the system."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "maintainability",
-        name: "Maintainability",
-        type: "characteristics",
-        definition: "The degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it, or adapt it to changes in the environment and requirements."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "functionality",
-        name: "Functionality",
-        type: "characteristics",
-        definition: "A set of functions that satisfies the explicit and implicit needs for the purpose for which the product is intended."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "dependability",
-        name: "Dependability",
-        type: "characteristics",
-        definition: "Quality of service provided by a given system and the trust placed in the service provided."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "confidentiality",
-        name: "Confidentiality",
-        type: "characteristics",
-        definition: "The degree to which data has attributes that ensure it is accessible and interpretable only by authorized users in a specific use context."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "accuracy",
-        name: "Accuracy",
-        type: "characteristics",
-        definition: "The degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific usage context."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "usability",
-        name: "Usability",
-        type: "characteristics",
-        definition: "The degree to which a product or system can be used by specific users to achieve specific goals effectively, efficiently, and to their satisfaction in a specified context of use."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "security",
-        name: "Security",
-        type: "characteristics",
-        definition: "The degree to which a product or system protects information and data so that people or other products or systems have the degree of access to the data that is appropriate for their authorization types and levels."
-    },
-    {
-        selected: false,
-        impacted: false,
         id: "availability",
         name: "Availability",
         type: "characteristics",
-        definition: "The degree to which data has attributes that allow it to be retrieved by authorized users and/or applications in a specific usage context."
+        definition: "refers to the ability of the system to be operational and accessible when necessary, minimizing interruptions or failures."
     },
     {
         selected: false,
         impacted: false,
-        id: "efficiency",
-        name: "Efficiency",
+        id: "instability",
+        name: "Instability",
         type: "characteristics",
-        definition: "The degree to which data have attributes that can be processed and provide the expected levels of performance using the appropriate amounts and types of resources in a specific use context."
+        definition: "relates to the system's tendency to suffer unexpected failures or outages, resulting in inconsistent functioning."
     },
     {
         selected: false,
         impacted: false,
-        id: "interoperability",
-        name: "Interoperability",
+        id: "performance",
+        name: "Performance",
         type: "characteristics",
-        definition: "The degree to which two or more systems, products, or components can exchange information and use the information that has been exchanged."
+        definition: "concerns the system's ability to respond effectively to requests and operate within established limits, ensuring acceptable response times."
     },
     {
         selected: false,
@@ -1246,7 +1174,7 @@ const iotCharacteristics = [
         id: "portability",
         name: "Portability",
         type: "characteristics",
-        definition: "The degree to which data has attributes that allow it to be installed, replaced, or moved from one system to another while preserving existing quality in a specific usage context."
+        definition: "refers to the ease with which a system can be transferred or adapted to different environments or platforms without significant loss of functionality."
     },
     {
         selected: false,
@@ -1254,15 +1182,7 @@ const iotCharacteristics = [
         id: "reliability",
         name: "Reliability",
         type: "characteristics",
-        definition: "The degree to which a system, product, or component performs specified functions under specified conditions for a specified period of time."
-    },
-    {
-        selected: false,
-        impacted: false,
-        id: "reusability",
-        name: "Reusability",
-        type: "characteristics",
-        definition: "The degree to which a resource can be used in more than one system, or in building other resources."
+        definition: "is related to the system's ability to perform its functions consistently and error-free over time."
     },
     {
         selected: false,
@@ -1270,16 +1190,72 @@ const iotCharacteristics = [
         id: "robustness",
         name: "Robustness",
         type: "characteristics",
-        definition: "The ability of a system, product, or component to function even under abnormal conditions."
+        definition: "focuses on the system's ability to handle adverse conditions, such as unexpected inputs or failure situations, while maintaining its functionality."
     },
     {
         selected: false,
         impacted: false,
-        id: "scalability",
-        name: "Scalability",
+        id: "precision",
+        name: "Precision",
         type: "characteristics",
-        definition: "The ease with which an application or component can be modified to expand its existing capabilities, including the ability to accommodate large volumes of data"
+        definition: "in this context, it refers to the system's ability to avoid or minimize risks, ensuring the protection of users and data."
     },
+    {
+        selected: false,
+        impacted: false,
+        id: "security",
+        name: "Security",
+        type: "characteristics",
+        definition: "is related to the protection of information and system resources against unauthorized access, cyber attacks and threats."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "maintainability",
+        name: "Maintainability",
+        type: "characteristics",
+        definition: "concerns the ease of making changes, corrections or improvements to the system efficiently and with low impact."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "usability",
+        name: "Usability",
+        type: "characteristics",
+        definition: "addresses the ease of use of the system, making it intuitive and efficient for users."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "reusability",
+        name: "Reusability",
+        type: "characteristics",
+        definition: "refers to the ability of system components or modules to be reused in different parts of the software or in other projects."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "testability",
+        name: "Testability",
+        type: "characteristics",
+        definition: "is related to the ease of carrying out effective tests on the system to verify its quality and functionality."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "modifiability",
+        name: "Modifiability",
+        type: "characteristics",
+        definition: "addresses the ease of making changes to the system to meet new requirements or correct problems without causing unwanted impacts."
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "efficiency",
+        name: "Efficiency",
+        type: "characteristics",
+        definition: "concerns the optimized use of resources such as CPU, memory and bandwidth to ensure adequate system performance."
+    }
 ]
 
 const tools = [
