@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "dotenv": "^16.4.7",
     "emailjs-com": "^2.6.4",
     "html-react-parser": "^1.2.6",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.5.1",
     "react-collapsible": "^2.8.3",
@@ -16,16 +16,17 @@
     "react-ga": "^2.7.0",
     "react-hook-form": "^7.3.6",
     "react-icons": "^4.2.0",
-    "react-latex": "^2.0.0",
+    "react-latex": "^1.2.0",
     "react-responsive-carousel": "^3.2.18",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^2.4.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.2",
     "react-tabs": "^3.2.0",
     "react-to-print": "^2.12.4",
     "react-toastify": "^7.0.4",
-    "surge": "^0.23.0"
+    "sass-loader": "^10.0.0",
+    "surge": "^0.0.0"
   },
   "repository": {
     "type": "git",
