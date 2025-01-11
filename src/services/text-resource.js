@@ -19,7 +19,7 @@ class Resource {
 
 const resource = {
     en: {
-        GuideFullTitle: 'Performance Testing <span className="text-color-primary">Guide</span><br /> For IoT Applications',
+        GuideFullTitle: 'Interoperability Testing <span className="text-color-primary">Guide</span><br /> For IoT Applications',
         GetStarted: 'Get started'
     },
     pt: {

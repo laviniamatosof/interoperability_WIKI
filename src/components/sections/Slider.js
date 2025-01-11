@@ -61,7 +61,7 @@ const Slider = ({
             <div className="container">
                 <SectionHeader data={sectionHeader} className="center-content" />
                 <div className={innerClasses}>
-                    <h4>The figures below show how to use the Performance Testing Guide for IoT Applications</h4>
+                    <h4>The figures below show how to use the Interoperability Testing Guide for IoT Applications</h4>
                     <div className="reveal-from-bottom" data-reveal-delay="600">
                         <Carousel showArrows={true}>
                             <div>

@@ -60,7 +60,14 @@ const About = ({
             <div className="container">
                 <SectionHeader data={sectionHeader} className="center-content" />
                 <div className={innerClasses}>
-                    <p>Performance refers to the amount of resources used under defined conditions. The performance characteristic, according to ISO 25010, is divided into 3 subcharacteristics - Temporal Behavior - is the level to which the response and processing time and transfer rates of a product or system, when performing its functions, meet the requirements, Resource Utilization - is the degree to which the quantities and types of resources used by a product or system, when performing their functions, meet the requirements, and Capacity - it is the degree to which the maximum limits of a product or system parameter meet the requirements. The guide aims to assist in performance testing of IoT applications by providing at the end of the process a customizable test plan.</p>
+                    <p>The central objective of this interoperability guide is to provide at the end of use a test plan that serves as a guideline for testers when
+                        evaluating interoperability in Internet of Things(IoT) applications. In this context, the Abstract Test Cases presented are conceived as abstract,
+                        and their adaptation according to the specific scenario of the application to be tested is essential. Using this guide offers a fundamental advantage
+                        in terms of efficiency, as tester swill not need to conduct extensive literature searches to define testing procedures. Instead,the guide will provide
+                        clear and targeted guidance for performing tests, contributing to a more effective and agile approach to the software systems interoperability assessment
+                        process. This targeted and structured approach provides a reliable methodology to ensure the robustness and quality of software applications, making it a
+                        valuable tool for testing professionals and researchers in the field of Software Engineering. This guide aims to offer assistance in carrying out
+                        Interoperability tests on IoT applications.</p>
                 </div>
             </div>
         </section>

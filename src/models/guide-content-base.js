@@ -15,7 +15,7 @@ const guideContent = [
                 title: "Common Interpretation",
                 characteristics: "data_semantics",
                 description: "The ability to ensure that different systems can correctly understand and interpret the data that is shared between them. Examples of using the Common Interpretation property in IoT applications: Payment Application Interoperability, Mobile payment applications such as Apple Pay and Google Play use communication protocols that allow mobile devices to communicate with compatible payment terminals to ensure correct interpretation of transaction data (GUINARD, 2016).",
-                dependents: ['M01'],
+                dependents: [],
                 impacts: ['P16', 'P17', 'P10', 'P21']
             },
             {
@@ -26,7 +26,7 @@ const guideContent = [
                 title: "Harmonization of Terminologies",
                 characteristics: "data_semantics",
                 description: "The ability to ensure that terms and concepts used to describe data are consistent across different systems, avoiding ambiguities and errors. For example, ensuring that different sensors use the same terminology to refer to location, temperature or humidity values (BANZI, 2015).",
-                dependents: ['M02'],
+                dependents: [],
                 impacts: ['P10', 'P21']
             },
             {
@@ -37,7 +37,7 @@ const guideContent = [
                 title: "Data Mapping",
                 characteristics: "data_semantics",
                 description: "The ability to transform data from one format to another, allowing  different systems to share information even if they use different standards or data structures. For example, converting temperature data in Fahrenheit to Celsius and km data to latitude and longitude (SIVASHANMUGAM, 2014).",
-                dependents: ['M03'],
+                dependents: [],
                 impacts: ['P16', 'P23']
             },
             {
@@ -48,7 +48,7 @@ const guideContent = [
                 title: "Semantic Compatibility",
                 characteristics: "data_semantics",
                 description: "The ability to ensure that data shared between different systems can be easily combined and used together, even if it originates from different sources. For example, ensuring that different sensors understand that a temperature reading of 20 degrees Celsius means the same thing on different systems (Suryadevara et al. 2018).",
-                dependents: ['M04'],
+                dependents: [],
                 impacts: ['P18', 'P12']
             },
             {
@@ -59,7 +59,7 @@ const guideContent = [
                 title: "Consistency",
                 characteristics: "data_semantics",
                 description: "Concerns the uniformity of data over time and across different systems. Consistent data ensures that information is not contradictory and can be used reliably (Redman, 1998).",
-                dependents: ['M05'],
+                dependents: [],
                 impacts: ['P23']
             },
             {
@@ -70,7 +70,7 @@ const guideContent = [
                 title: "Accuracy",
                 characteristics: "data_semantics",
                 description: "Refers to the ability of data to accurately represent the concept it is intended to describe. In other words, accurate data is free from errors and ambiguities, ensuring a faithful representation of information (Welty and McGuinness,2004).",
-                dependents: ['M06'],
+                dependents: [],
                 impacts: ['P24', 'P15', 'P8']
             },
             {
@@ -81,7 +81,7 @@ const guideContent = [
                 title: "Vocabulary Comprehension",
                 characteristics: "data_semantics",
                 description: "The need for systems to share a common vocabulary or ontology to ensure mutual understanding of terms used in communication (Smith et al., 2004).",
-                dependents: ['M07'],
+                dependents: [],
                 impacts: ['P1', 'P9']
             },
             {
@@ -92,7 +92,7 @@ const guideContent = [
                 title: "Semantic Coherence",
                 characteristics: "data_semantics",
                 description: "The need for data to maintain semantic consistency across different contexts and over time. This ensures that the data is understood uniformly, regardless of variations in context or evolutions in the system (Smith et al., 2004).",
-                dependents: ['M08'],
+                dependents: [],
                 impacts: ['P17', 'P9']
             }
         ],
@@ -296,7 +296,7 @@ const guideContent = [
                 title: "Compatibility",
                 characteristics: "communication_protocol",
                 description: "Communication standards must be compatible with a wide variety of devices and systems (SCHMIDT, 2015).",
-                dependents: ['M01'],
+                dependents: [],
                 impacts: ['P1', 'P8', 'P22', 'P16', 'P17']
             },
             {
@@ -307,7 +307,7 @@ const guideContent = [
                 title: "Consistency",
                 characteristics: "communication_protocol",
                 description: "Technical specifications must be clear and consistent to ensure that all devices and systems involved can communicate effectively (YAO et al., 2020).",
-                dependents: ['M02'],
+                dependents: [],
                 impacts: ['P4', 'P18', 'P24']
             },
             {
@@ -318,7 +318,7 @@ const guideContent = [
                 title: "Security",
                 characteristics: "communication_protocol",
                 description: "Communication standards must include robust security protocols to  protect information transmitted between devices (DE SILVA et al., 2017).",
-                dependents: ['M03'],
+                dependents: [],
                 impacts: ['P4', 'P6', 'P23', 'P18', 'P17']
             },
             {
@@ -329,7 +329,7 @@ const guideContent = [
                 title: "Scalability",
                 characteristics: "communication_protocol",
                 description: "Protocols such as MQTT are scalable and allow IoT devices to be easily added or removed from a network without compromising the quality of communication (AL-FUQAHA et al., 2015).",
-                dependents: ['M04'],
+                dependents: [],
                 impacts: ['P7', 'P21', 'P20']
             },
             {
@@ -340,7 +340,7 @@ const guideContent = [
                 title: "Flexibility",
                 characteristics: "communication_protocol",
                 description: "Communication standards must be flexible to allow different types of devices and systems to be integrated into the network and to allow new technologies to be added to the network in the future (PETROLO et al., 2018).",
-                dependents: ['M05'],
+                dependents: [],
                 impacts: ['P22', 'P20', 'P1']
             },
             {
@@ -351,7 +351,7 @@ const guideContent = [
                 title: "Cross-platform Interoperability",
                 characteristics: "communication_protocol",
                 description: "Communication standards must allow different platforms, such as operating systems, to communicate effectively, ensuring that information is shared reliably between devices and systems that use different platforms (CHENG et al., 2019).",
-                dependents: ['M06'],
+                dependents: [],
                 impacts: ['P18', 'P19', 'P6']
             },
             {
@@ -362,7 +362,7 @@ const guideContent = [
                 title: "Transmission Error Rate",
                 characteristics: "communication_protocol",
                 description: "Measures accuracy in message transmission, identifying the rate of errors that can affect interoperability (Suryadevara et al. 2018).",
-                dependents: ['M07'],
+                dependents: [],
                 impacts: ['P6', 'P25', 'P17']
             }
         ],
@@ -603,7 +603,7 @@ const guideContent = [
                 title: "Protocol Compatibility",
                 characteristics: "system_integration",
                 description: "Different devices and systems must be able to communicate with each other, regardless of the protocol used.",
-                dependents: ['M01'],
+                dependents: [],
                 impacts: ['P1', 'P4', 'P7', 'P10', 'P9']
             },
             {
@@ -614,7 +614,7 @@ const guideContent = [
                 title: "Data Compatibility",
                 characteristics: "system_integration",
                 description: "Different systems must be able to interpret and use data generated by other systems.",
-                dependents: ['M02'],
+                dependents: [],
                 impacts: ['P1', 'P2', 'P8', 'P23', 'P13']
             },
             {
@@ -625,7 +625,7 @@ const guideContent = [
                 title: "Reliability",
                 characteristics: "system_integration",
                 description: "Integrated systems must be able to function reliably despite network or device failures or outages.",
-                dependents: ['M03'],
+                dependents: [],
                 impacts: ['P12', 'P13', 'P6']
             },
             {
@@ -636,7 +636,7 @@ const guideContent = [
                 title: "Scalability",
                 characteristics: "system_integration",
                 description: "Embedded systems must be able to handle a large number of devices and users.",
-                dependents: ['M04'],
+                dependents: [],
                 impacts: ['P9', 'P3', 'P5', 'P22']
             },
             {
@@ -647,7 +647,7 @@ const guideContent = [
                 title: "Flexibility",
                 characteristics: "system_integration",
                 description: "Integrated systems must be able to adapt to changes in environmental conditions or user needs.",
-                dependents: ['M05'],
+                dependents: [],
                 impacts: []
             }
         ],
@@ -862,7 +862,7 @@ const guideContent = [
                 title: "Compatibility",
                 characteristics: "network_protocol",
                 description: "Protocols must be compatible with the hardware and software specifications of the connected devices.",
-                dependents: ['M01'],
+                dependents: [],
                 impacts: ['P16', 'Ṕ17', 'P9', 'P12', 'P1']
             },
             {
@@ -873,7 +873,7 @@ const guideContent = [
                 title: "Scalability",
                 characteristics: "network_protocol",
                 description: "Protocols must allow expansion of the IoT system to support a large number of devices and users.",
-                dependents: ['M02'],
+                dependents: [],
                 impacts: ['P4', 'P7', 'P12', 'P19']
             },
             {
@@ -884,7 +884,7 @@ const guideContent = [
                 title: "Security",
                 characteristics: "network_protocol",
                 description: "Protocols must ensure the security of communication between devices, including authentication, authorization and data encryption.",
-                dependents: ['M03'],
+                dependents: [],
                 impacts: ['P6', 'P8', 'P11', 'P18']
             },
             {
@@ -895,7 +895,7 @@ const guideContent = [
                 title: "Energy Efficiency",
                 characteristics: "network_protocol",
                 description: "Protocols must be optimized to reduce power consumption of connected devices while maximizing battery life.",
-                dependents: ['M04'],
+                dependents: [],
                 impacts: ['P3', 'P6', 'P15']
             },
             {
@@ -906,7 +906,7 @@ const guideContent = [
                 title: "Latency",
                 characteristics: "network_protocol",
                 description: "Protocols must ensure response times fast enough to enable real-time  control of devices.",
-                dependents: ['M05'],
+                dependents: [],
                 impacts: ['P8', 'P15', 'P14', 'P17']
             }
         ],
