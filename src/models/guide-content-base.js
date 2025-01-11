@@ -16,7 +16,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The ability to ensure that different systems can correctly understand and interpret the data that is shared between them. Examples of using the Common Interpretation property in IoT applications: Payment Application Interoperability, Mobile payment applications such as Apple Pay and Google Play use communication protocols that allow mobile devices to communicate with compatible payment terminals to ensure correct interpretation of transaction data (GUINARD, 2016).",
                 dependents: ['M01'],
-                impacts: ['P9','P10','P13']
+                impacts: ['P16', 'P17', 'P10', 'P21']
             },
             {
                 selected: false,
@@ -27,7 +27,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The ability to ensure that terms and concepts used to describe data are consistent across different systems, avoiding ambiguities and errors. For example, ensuring that different sensors use the same terminology to refer to location, temperature or humidity values (BANZI, 2015).",
                 dependents: ['M02'],
-                impacts: ['P1','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P10', 'P21']
             },
             {
                 selected: false,
@@ -38,7 +38,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The ability to transform data from one format to another, allowing  different systems to share information even if they use different standards or data structures. For example, converting temperature data in Fahrenheit to Celsius and km data to latitude and longitude (SIVASHANMUGAM, 2014).",
                 dependents: ['M03'],
-                impacts: ['P17','P18','P20']
+                impacts: ['P16', 'P23']
             },
             {
                 selected: false,
@@ -49,7 +49,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The ability to ensure that data shared between different systems can be easily combined and used together, even if it originates from different sources. For example, ensuring that different sensors understand that a temperature reading of 20 degrees Celsius means the same thing on different systems (Suryadevara et al. 2018).",
                 dependents: ['M04'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P18', 'P12']
             },
             {
                 selected: false,
@@ -60,7 +60,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "Concerns the uniformity of data over time and across different systems. Consistent data ensures that information is not contradictory and can be used reliably (Redman, 1998).",
                 dependents: ['M05'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P23']
             },
             {
                 selected: false,
@@ -71,7 +71,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "Refers to the ability of data to accurately represent the concept it is intended to describe. In other words, accurate data is free from errors and ambiguities, ensuring a faithful representation of information (Welty and McGuinness,2004).",
                 dependents: ['M06'],
-                impacts: ['P1','P2','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P24', 'P15', 'P8']
             },
             {
                 selected: false,
@@ -82,7 +82,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The need for systems to share a common vocabulary or ontology to ensure mutual understanding of terms used in communication (Smith et al., 2004).",
                 dependents: ['M07'],
-                impacts: ['P2','P9','P10','P13','P17','P18','P20']
+                impacts: ['P1', 'P9']
             },
             {
                 selected: false,
@@ -93,7 +93,7 @@ const guideContent = [
                 characteristics: "data_semantics",
                 description: "The need for data to maintain semantic consistency across different contexts and over time. This ensures that the data is understood uniformly, regardless of variations in context or evolutions in the system (Smith et al., 2004).",
                 dependents: ['M08'],
-                impacts: ['P1','P2','P3','P6','P7','P9','P10','P13','P17','P18','P20']
+                impacts: ['P17', 'P9']
             }
         ],
         testCases: [
@@ -225,7 +225,7 @@ const guideContent = [
                 measure: [
                     "Calculates the success rate as percentage (\\%), where the number of successful interactions is divided by the total number of interactions and multiplied by 100 to obtain the \\% representation",
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC01', 'TC02', 'TC03', 'TC06', 'TC08', 'TC10', 'TC11', 'TC12', 'TC16', 'TC17', 'TC18', 'eclipse', 'wireshark', 'home_assistant']
             },
             {
                 selected: false,
@@ -242,7 +242,7 @@ const guideContent = [
                     "Interaction success rate:percentage of interaction attempts that were successful",
                     "MEASURE =(Number of Supported Protocols / Total Number of Protocols) * 100",
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC02', 'TC05', 'TC17', 'TC24', 'home_assistant']
             },
             {
                 selected: false,
@@ -259,7 +259,8 @@ const guideContent = [
                     "Interaction success rate:percentage of interaction attempts that were successful",
                     "Success Rate (%) =(Number of Successful Interactions / Total Number of Attempts) x 100"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'neotys', 'iotify']
+                dependents: ['TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC11', 'TC12', 'TC13', 'TC14', 'TC15', 'TC16', 'TC17', 'TC18', 'TC19', 'TC20',
+                    'TC23', 'TC24', 'TC25', 'wireshark', 'home_assistant']
             },
             {
                 selected: false,
@@ -274,7 +275,8 @@ const guideContent = [
                 measure: [
                     "X = Qty of data types / Data integration success rate"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'TC12', 'TC13', 'TC14', 'TC15',
+                    'TC16', 'TC17', 'TC18', 'TC19', 'TC20', 'TC21', 'TC22', 'TC23', 'TC24', 'TC25', 'wireshark', 'home_assistant']
             }
         ]
     },
@@ -290,78 +292,78 @@ const guideContent = [
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P1",
+                id: "P9",
                 title: "Compatibility",
                 characteristics: "communication_protocol",
                 description: "Communication standards must be compatible with a wide variety of devices and systems (SCHMIDT, 2015).",
                 dependents: ['M01'],
-                impacts: ['P9','P10','P13']
+                impacts: ['P1', 'P8', 'P22', 'P16', 'P17']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P2",
+                id: "P10",
                 title: "Consistency",
                 characteristics: "communication_protocol",
                 description: "Technical specifications must be clear and consistent to ensure that all devices and systems involved can communicate effectively (YAO et al., 2020).",
                 dependents: ['M02'],
-                impacts: ['P1','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P4', 'P18', 'P24']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P3",
+                id: "P11",
                 title: "Security",
                 characteristics: "communication_protocol",
                 description: "Communication standards must include robust security protocols to  protect information transmitted between devices (DE SILVA et al., 2017).",
                 dependents: ['M03'],
-                impacts: ['P17','P18','P20']
+                impacts: ['P4', 'P6', 'P23', 'P18', 'P17']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P4",
+                id: "P12",
                 title: "Scalability",
                 characteristics: "communication_protocol",
                 description: "Protocols such as MQTT are scalable and allow IoT devices to be easily added or removed from a network without compromising the quality of communication (AL-FUQAHA et al., 2015).",
                 dependents: ['M04'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P7', 'P21', 'P20']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P5",
+                id: "P13",
                 title: "Flexibility",
                 characteristics: "communication_protocol",
                 description: "Communication standards must be flexible to allow different types of devices and systems to be integrated into the network and to allow new technologies to be added to the network in the future (PETROLO et al., 2018).",
                 dependents: ['M05'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P22', 'P20', 'P1']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P6",
+                id: "P14",
                 title: "Cross-platform Interoperability",
                 characteristics: "communication_protocol",
                 description: "Communication standards must allow different platforms, such as operating systems, to communicate effectively, ensuring that information is shared reliably between devices and systems that use different platforms (CHENG et al., 2019).",
                 dependents: ['M06'],
-                impacts: ['P1','P2','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P18', 'P19', 'P6']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P7",
+                id: "P15",
                 title: "Transmission Error Rate",
                 characteristics: "communication_protocol",
                 description: "Measures accuracy in message transmission, identifying the rate of errors that can affect interoperability (Suryadevara et al. 2018).",
                 dependents: ['M07'],
-                impacts: ['P2','P9','P10','P13','P17','P18','P20']
+                impacts: ['P6', 'P25', 'P17']
             }
         ],
         testCases: [
@@ -370,8 +372,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC01",
-                idLong: "Test Case 01",
+                id: "TC07",
+                idLong: "Test Case 07",
                 title: "Testing Communication Patterns in IoT Devices",
                 characteristics: "communication_protocol",
                 testEnvironment: "Two IoT devices from different manufacturers (Device A and Device B).",
@@ -390,8 +392,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC02",
-                idLong: "Test Case 02",
+                id: "TC08",
+                idLong: "Test Case 08",
                 title: "Communication Protocol Compatibility Test",
                 characteristics: "communication_protocol",
                 testEnvironment: "Network environment with IoT devices using different communication  protocols",
@@ -408,8 +410,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC03",
-                idLong: "Test Case 03",
+                id: "TC09",
+                idLong: "Test Case 09",
                 title: "Device connection test with gateway",
                 characteristics: "communication_protocol",
                 testEnvironment: "IoT Network with Gateway Device",
@@ -426,8 +428,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC04",
-                idLong: "Test Case 04",
+                id: "TC10",
+                idLong: "Test Case 10",
                 title: "Testing communication between devices",
                 characteristics: "communication_protocol",
                 testEnvironment: "IoT network with two connected devices",
@@ -444,8 +446,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC05",
-                idLong: "Test Case 05",
+                id: "TC11",
+                idLong: "Test Case 11",
                 title: "Integration testing with external API",
                 characteristics: "communication_protocol",
                 testEnvironment: "IoT network with device connected to an external API",
@@ -462,8 +464,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 1.0,
-                id: "TC06",
-                idLong: "Test Case 06",
+                id: "TC12",
+                idLong: "Test Case 12",
                 title: "Authentication and security testing",
                 characteristics: "communication_protocol",
                 testEnvironment: "IoT network with authentication device and server",
@@ -479,8 +481,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 1.0,
-                id: "TC07",
-                idLong: "Test Case 07",
+                id: "TC13",
+                idLong: "Test Case 13",
                 title: "Security Testing of Communication Protocols on IoT Devices",
                 characteristics: "communication_protocol",
                 testEnvironment: "IoT Testing Lab",
@@ -501,7 +503,7 @@ const guideContent = [
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M01",
+                id: "M05",
                 title: "Data Transfer Rate",
                 characteristics: "communication_protocol",
                 purpose: "Evaluate the communication capacity between devices in an IoT  network.",
@@ -512,14 +514,15 @@ const guideContent = [
                     "D = amount of data transferred",
                     "T = time required for complete transfer"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC08', 'TC09', 'TC10', 'TC11', 'TC12', 'TC13', 'TC14', 'TC15', 'TC16', 'TC17',
+                    'TC18', 'TC19', 'TC20', 'TC21', 'TC22', 'TC23', 'TC24', 'TC25', 'wireshark', 'home_assistant']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 5.0,
-                id: "M02",
+                id: "M06",
                 title: "Number of Communication Failures",
                 characteristics: "communication_protocol",
                 purpose: "Evaluate the reliability of communication between devices in an IoT network.",
@@ -530,14 +533,14 @@ const guideContent = [
                     "T is the total observation time (e.g. in hours).",
                     "G is a measure of failure severity (e.g., a scale of 1 to 10, where 1 represents minor failures and 10 represents severe failures)."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC01', 'TC06', 'TC10', 'TC19', 'TC20', 'TC21', 'TC22', 'TC23', 'TC24', 'TC25', 'eclipse', 'wireshark', 'home_assistant']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 2.0,
-                id: "M03",
+                id: "M07",
                 title: "Network Latency",
                 characteristics: "communication_protocol",
                 purpose: "Evaluate IoT network response time.",
@@ -548,14 +551,14 @@ const guideContent = [
                     "t1 = message sending time",
                     "t2 = message reception time"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'neotys', 'iotify']
+                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M04",
+                id: "M08",
                 title: "Connection Success Rate",
                 characteristics: "communication_protocol",
                 purpose: "Evaluate the effectiveness of communication standards in establishing  connections between devices in an IoT network.",
@@ -563,14 +566,14 @@ const guideContent = [
                 measure: [
                     "X = number of successful connections / total number of connection  attempts"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC08', 'TC15', 'TC18', 'coapthon']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M05",
+                id: "M09",
                 title: "Network Latency Variation",
                 characteristics: "communication_protocol",
                 purpose: "Evaluate the stability of the IoT network in relation to response time.",
@@ -580,7 +583,7 @@ const guideContent = [
                     "nis the number of data received correctly",
                     "Nis the total number of data sent."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC03', 'TC09']
             },
         ]
     },
@@ -596,56 +599,56 @@ const guideContent = [
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P1",
+                id: "P16",
                 title: "Protocol Compatibility",
                 characteristics: "system_integration",
                 description: "Different devices and systems must be able to communicate with each other, regardless of the protocol used.",
                 dependents: ['M01'],
-                impacts: ['P9','P10','P13']
+                impacts: ['P1', 'P4', 'P7', 'P10', 'P9']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P2",
+                id: "P17",
                 title: "Data Compatibility",
                 characteristics: "system_integration",
                 description: "Different systems must be able to interpret and use data generated by other systems.",
                 dependents: ['M02'],
-                impacts: ['P1','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P1', 'P2', 'P8', 'P23', 'P13']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P3",
+                id: "P18",
                 title: "Reliability",
                 characteristics: "system_integration",
                 description: "Integrated systems must be able to function reliably despite network or device failures or outages.",
                 dependents: ['M03'],
-                impacts: ['P17','P18','P20']
+                impacts: ['P12', 'P13', 'P6']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P4",
+                id: "P19",
                 title: "Scalability",
                 characteristics: "system_integration",
                 description: "Embedded systems must be able to handle a large number of devices and users.",
                 dependents: ['M04'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P9', 'P3', 'P5', 'P22']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P5",
+                id: "P20",
                 title: "Flexibility",
                 characteristics: "system_integration",
                 description: "Integrated systems must be able to adapt to changes in environmental conditions or user needs.",
                 dependents: ['M05'],
-                impacts: ['P3','P18','P20']
+                impacts: []
             }
         ],
         testCases: [
@@ -654,8 +657,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC01",
-                idLong: "Test Case 01",
+                id: "TC14",
+                idLong: "Test Case 14",
                 title: "Interoperability Testing Between Devices",
                 characteristics: "system_integration",
                 testEnvironment: "IoT device network",
@@ -676,8 +679,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC02",
-                idLong: "Test Case 02",
+                id: "TC15",
+                idLong: "Test Case 15",
                 title: "Test of Reliability in an Industrial Environment",
                 characteristics: "system_integration",
                 testEnvironment: "Industrial automation system",
@@ -696,8 +699,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC03",
-                idLong: "Test Case 03",
+                id: "TC16",
+                idLong: "Test Case 16",
                 title: "Scalability Testing in a Retail Environment",
                 characteristics: "system_integration",
                 testEnvironment: "Inventory management system in a chain of retail stores.",
@@ -716,8 +719,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC04",
-                idLong: "Test Case 04",
+                id: "TC17",
+                idLong: "Test Case 17",
                 title: "Protocol Compatibility Test",
                 characteristics: "system_integration",
                 testEnvironment: "Smart city environment with multiple devices from different vendors, including traffic sensors, street lighting systems, and environmental monitoring systems.",
@@ -736,8 +739,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC05",
-                idLong: "Test Case 05",
+                id: "TC18",
+                idLong: "Test Case 18",
                 title: "Scalability and Flexibility Test",
                 characteristics: "system_integration",
                 testEnvironment: "A network of traffic monitoring devices in a metropolitan area with a large number of devices and variations in traffic conditions.",
@@ -758,7 +761,7 @@ const guideContent = [
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M01",
+                id: "M10",
                 title: "System Integration Success Rate",
                 characteristics: "system_integration",
                 purpose: "Evaluate the effectiveness of service interoperability in an IoT environment.",
@@ -769,14 +772,15 @@ const guideContent = [
                     "n1 = number of successful service interoperability attempts during the evaluated period",
                     "n2 = total number of service interoperability attempts during the evaluated period"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'TC12', 'TC13', 'TC14', 'TC15',
+                    'TC16', 'TC17', 'TC18', 'TC19', 'TC20', 'TC21', 'TC22', 'TC23', 'TC24', 'TC25', 'coapthon']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 5.0,
-                id: "M02",
+                id: "M11",
                 title: "Average System Integration Time",
                 characteristics: "system_integration",
                 purpose: "Evaluate the average time required to integrate systems in an IoT  environment.",
@@ -787,14 +791,14 @@ const guideContent = [
                     "t = time required for successful service interoperability",
                     "n = total number of service interoperability attempts during the evaluated period"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC07', 'TC11']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 2.0,
-                id: "M03",
+                id: "M12",
                 title: "Integration Interface Standardization Level",
                 characteristics: "system_integration",
                 purpose: "Assess the degree of standardization of service interoperability  interfaces in an IoT environment.",
@@ -804,14 +808,14 @@ const guideContent = [
                     "n1 = number of service interoperability interfaces that comply with defined standards",
                     "n2 = total number of service interoperability interfaces evaluatedX = (n1 / n2) x 100%"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'neotys', 'iotify']
+                dependents: ['TC01', 'TC07', 'TC12', 'TC17', 'TC18', 'TC23', 'TC24', 'TC25', 'eclipse', 'coapthon']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M04",
+                id: "M13",
                 title: "Data Transfer Rate",
                 characteristics: "system_integration",
                 purpose: "Evaluate the communication capacity between interconnected systems in IoT.",
@@ -823,14 +827,14 @@ const guideContent = [
                     "T2 = end time of data transfer",
                     "S = amount of data transmitted"
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC13', 'TC20']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M05",
+                id: "M14",
                 title: "Integration Time",
                 characteristics: "system_integration",
                 purpose: "Evaluate the time required for the integration of different IoT systems.",
@@ -838,7 +842,7 @@ const guideContent = [
                 measure: [
                     "X = t2 - t1, where X is the integration time, t1 is the start time of the integration process and t2 is the time at which the integration is completed."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC04', 'TC09', 'TC14']
             },
         ]
     },
@@ -854,56 +858,56 @@ const guideContent = [
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P1",
+                id: "P21",
                 title: "Compatibility",
                 characteristics: "network_protocol",
                 description: "Protocols must be compatible with the hardware and software specifications of the connected devices.",
                 dependents: ['M01'],
-                impacts: ['P9','P10','P13']
+                impacts: ['P16', 'Ṕ17', 'P9', 'P12', 'P1']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P2",
+                id: "P22",
                 title: "Scalability",
                 characteristics: "network_protocol",
                 description: "Protocols must allow expansion of the IoT system to support a large number of devices and users.",
                 dependents: ['M02'],
-                impacts: ['P1','P3','P9','P10','P13','P17','P18','P20']
+                impacts: ['P4', 'P7', 'P12', 'P19']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P3",
+                id: "P23",
                 title: "Security",
                 characteristics: "network_protocol",
                 description: "Protocols must ensure the security of communication between devices, including authentication, authorization and data encryption.",
                 dependents: ['M03'],
-                impacts: ['P17','P18','P20']
+                impacts: ['P6', 'P8', 'P11', 'P18']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P4",
+                id: "P24",
                 title: "Energy Efficiency",
                 characteristics: "network_protocol",
                 description: "Protocols must be optimized to reduce power consumption of connected devices while maximizing battery life.",
                 dependents: ['M04'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P3', 'P6', 'P15']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "properties",
-                id: "P5",
+                id: "P25",
                 title: "Latency",
                 characteristics: "network_protocol",
                 description: "Protocols must ensure response times fast enough to enable real-time  control of devices.",
                 dependents: ['M05'],
-                impacts: ['P3','P18','P20']
+                impacts: ['P8', 'P15', 'P14', 'P17']
             }
         ],
         testCases: [
@@ -912,8 +916,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC01",
-                idLong: "Test Case 01",
+                id: "TC19",
+                idLong: "Test Case 19",
                 title: "Network Protocol Compatibility Test",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT system with devices from different suppliers connected through  different Network protocol.",
@@ -930,8 +934,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC02",
-                idLong: "Test Case 02",
+                id: "TC20",
+                idLong: "Test Case 20",
                 title: "Network Protocol Scalability Test",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT system with a large number of devices connected via a specific  network protocol.",
@@ -948,8 +952,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC03",
-                idLong: "Test Case 03",
+                id: "TC21",
+                idLong: "Test Case 21",
                 title: "Network Protocol Security Test",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT system with devices connected through Network protocol that  support security characterístics.",
@@ -966,8 +970,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 3.0,
-                id: "TC04",
-                idLong: "Test Case 04",
+                id: "TC22",
+                idLong: "Test Case 22",
                 title: "Network Protocol Energy Efficiency Test",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT system with devices connected via Network protocol that support  energy efficiency characterístics",
@@ -984,8 +988,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC05",
-                idLong: "Test Case 05",
+                id: "TC23",
+                idLong: "Test Case 23",
                 title: "Protocol Compatibility Test",
                 characteristics: "network_protocol",
                 testEnvironment: "A network of IoT devices in a smart city with different devices from  different manufacturers.",
@@ -1004,8 +1008,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC05",
-                idLong: "Test Case 06",
+                id: "TC24",
+                idLong: "Test Case 24",
                 title: "Protocol Compatibility Testing for IoT Asset Tracking",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT asset tracking environment, with tracking devices from different manufacturers and technologies, all sending latitude and longitude data.",
@@ -1025,8 +1029,8 @@ const guideContent = [
                 impacted: false,
                 type: "testCases",
                 timeSpentDefault: 2.0,
-                id: "TC05",
-                idLong: "Test Case 07",
+                id: "TC25",
+                idLong: "Test Case 25",
                 title: "Security Testing Using HTTPS",
                 characteristics: "network_protocol",
                 testEnvironment: "IoT network with two or more HTTPS-capable devices",
@@ -1046,7 +1050,7 @@ const guideContent = [
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M01",
+                id: "M15",
                 title: "Network Latency",
                 characteristics: "network_protocol",
                 purpose: "Evaluate network response time during communication between  devices.",
@@ -1057,14 +1061,14 @@ const guideContent = [
                     "t1 is the time when device A sent the data packet.",
                     "t2 is the time when device B sent the response."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC07', 'TC15', 'TC19', 'TC21', 'TC23']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 5.0,
-                id: "M02",
+                id: "M16",
                 title: "Network Throughput",
                 characteristics: "network_protocol",
                 purpose: "Assess the amount of data that can be transmitted between devices in a  given period of time.",
@@ -1072,14 +1076,14 @@ const guideContent = [
                 measure: [
                     "X = S/t, where X is the network throughput, S is the size of the data sent, and t is the time required for complete transmission."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump']
+                dependents: ['TC05', 'TC08', 'TC09', 'TC10', 'TC11', 'TC16']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 2.0,
-                id: "M03",
+                id: "M17",
                 title: "Data Transmission Rate",
                 characteristics: "network_protocol",
                 purpose: "Assess the ability of the network protocol to transmit data at a given  speed.",
@@ -1087,14 +1091,14 @@ const guideContent = [
                 measure: [
                     "X = S / t, where X is the data transmission rate, S is the size of the data sent, and t is the time required for complete transmission."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'neotys', 'iotify']
+                dependents: ['TC05', 'TC17']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M04",
+                id: "M18",
                 title: "Connection Reliability",
                 characteristics: "network_protocol",
                 purpose: "Assess the ability of the network protocol to maintain a stable and reliable  connection between devices.",
@@ -1104,14 +1108,14 @@ const guideContent = [
                     "n is the number of data received correctly.",
                     "N is the total number of data sent."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC07', 'TC12', 'TC15', 'TC18']
             },
             {
                 selected: false,
                 impacted: false,
                 type: "metrics",
                 timeSpentDefault: 3.0,
-                id: "M05",
+                id: "M19",
                 title: "System Scalability",
                 characteristics: "network_protocol",
                 purpose: "Assess the ability of the network protocol to support a large number of  simultaneously connected devices.",
@@ -1119,7 +1123,7 @@ const guideContent = [
                 measure: [
                     "X = N, where X is the system scalability and N is the maximum number of simultaneously connected devices that the network protocol can support."
                 ],
-                dependents: ['TC01', 'TC02', 'TC03', 'TC04', 'TC05', 'TC06', 'TC07', 'TC08', 'TC09', 'TC10', 'TC11', 'wireshark', 'tcpdump', 'iotify']
+                dependents: ['TC01', 'TC19', 'TC20', 'TC21', 'TC22', 'TC23', 'TC24', 'TC25', 'tasmota', 'wireshark']
             },
         ]
     }
@@ -1302,12 +1306,12 @@ const tools = [
     {
         selected: false,
         impacted: false,
-        id: "neotys",
-        title: "Neotys",
+        id: "eclipse",
+        title: "Eclipse IoT",
         type: "tools",
-        description: "Test platform for cloud computing. Performs performance analysis, running load tests. Allows you to evaluate the response time, providing application performance data.",
-        license: "Closed",
-        link: "https://www.neotys.com/"
+        description: "Toolkit for developing and testing IoT applications",
+        license: "Open-Source",
+        link: "https://iot.eclipse.org/testware/"
     },
     {
         selected: false,
@@ -1315,19 +1319,19 @@ const tools = [
         id: "wireshark",
         title: "Wireshark",
         type: "tools",
-        description: "A system that analyzes traffic on the network, being able to monitor the entry and exit of data in different protocols.",
+        description: "Network protocol analyzer for monitoring and debugging IoT traffic",
         license: "Open-Source",
         link: "https://www.wireshark.org/"
     },
     {
         selected: false,
         impacted: false,
-        id: "loadUI",
-        title: "LoadUI Pro",
+        id: "Coapthon",
+        title: "CoAPthon",
         type: "tools",
-        description: "Test platform for cloud computing. Performs load tests, functional tests, among others. It provides test scenarios that the user can use directly or adapt to their application or even create their own test cases. In addition, the tool performs network traffic monitoring.",
-        license: "Closed",
-        link: "https://www.soapui.org/professional/loadui-pro/"
+        description: "Library for developing and testing IoT applications based on the CoAP protocol",
+        license: "Open-Source",
+        link: "https://github.com/Tanganelli/CoAPthon3"
     },
     {
         selected: false,
@@ -1335,19 +1339,49 @@ const tools = [
         id: "iotify",
         title: "IoTIFY",
         type: "tools",
-        description: "It offers a virtual lab, with virtual devices for performance, security and other testing.",
+        description: "IoT device simulator for interoperability testing",
         license: "Closed",
         link: "https://iotify.io/"
     },
     {
         selected: false,
         impacted: false,
-        id: "tcpdump",
-        title: "Tcpdump",
+        id: "freertos",
+        title: "FreeRTOS",
         type: "tools",
-        description: "Similar to Wireshark, it monitors packet traffic on the network. You can identify traffic on specific ports, traffic from a specific sender, and recipients, and other functions.",
+        description: "Real-time operating system for IoT devices",
         license: "Open-Source",
-        link: "http://www.tcpdump.org/"
+        link: "https://www.freertos.org/"
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "tasmota",
+        title: "Tasmota",
+        type: "tools",
+        description: "Open source firmware for ESP8266 and ESP32 based IoT devices",
+        license: "Open-Source",
+        link: "https://tasmota.github.io/docs/"
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "openiot",
+        title: "OpenIoT",
+        type: "tools",
+        description: "Interoperability and integration platform for IoT. It has a set of tools for testing interoperability between IoT devices and their application programming interfaces (APIs).",
+        license: "Open-Source",
+        link: "https://github.com/OpenIotOrg/openiot"
+    },
+    {
+        selected: false,
+        impacted: false,
+        id: "home_assistant",
+        title: "Home Assistant",
+        type: "tools",
+        description: "Open source home automation software supporting a wide range of IoT devices. It has an integration testing tool that checks the compatibility of specific devices with the platform.",
+        license: "Open-Source",
+        link: "https://www.home-assistant.io/integrations/pytest_homeassistant/"
     }
 ];
 
