@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/interoperability_WIKI/static/css/main.46ba6d1b.css",
-    "main.js": "/interoperability_WIKI/static/js/main.049f5ddf.js",
+    "main.js": "/interoperability_WIKI/static/js/main.235a193c.js",
     "static/media/steps_Prancheta 2.png": "/interoperability_WIKI/static/media/steps_Prancheta 2.39ece5a6bfeda3bafb30.png",
     "static/media/eventos-iot-en.png": "/interoperability_WIKI/static/media/eventos-iot-en.005c85583b31bf8c87e7.png",
     "static/media/steps_Prancheta 5.png": "/interoperability_WIKI/static/media/steps_Prancheta 5.3447e62d8b549beface0.png",
@@ -76,10 +76,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/interoperability_WIKI/static/media/KaTeX_Size3-Regular.943a01ec6dae1a54fa8b.woff2",
     "index.html": "/interoperability_WIKI/index.html",
     "main.46ba6d1b.css.map": "/interoperability_WIKI/static/css/main.46ba6d1b.css.map",
-    "main.049f5ddf.js.map": "/interoperability_WIKI/static/js/main.049f5ddf.js.map"
+    "main.235a193c.js.map": "/interoperability_WIKI/static/js/main.235a193c.js.map"
   },
   "entrypoints": [
     "static/css/main.46ba6d1b.css",
-    "static/js/main.049f5ddf.js"
+    "static/js/main.235a193c.js"
   ]
 }
