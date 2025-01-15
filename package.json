@@ -1,6 +1,6 @@
 {
-  "homepage": "https://lavimatosof.github.io/interoperability_WIKI",
   "name": "performance-testing-guide",
+  "homepage": "https://lavimatosof.github.io/interoperability_WIKI",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
