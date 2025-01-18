@@ -863,7 +863,7 @@ const guideContent = [
                 characteristics: "network_protocol",
                 description: "Protocols must be compatible with the hardware and software specifications of the connected devices.",
                 dependents: [],
-                impacts: ['P16', 'Ṕ17', 'P9', 'P12', 'P1']
+                impacts: ['P16', 'P17', 'P9', 'P12', 'P1']
             },
             {
                 selected: false,
