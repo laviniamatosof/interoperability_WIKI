@@ -61,7 +61,7 @@ const Environment = ({
             <div className="container">
                 <SectionHeader data={sectionHeader} className="center-content" />
                 <div className={innerClasses}>
-                    <p>The Performance Testing Guide for IoT Applications is built to evaluate IoT applications
+                    <p>The Interoperability Testing Guide for IoT Applications is built to evaluate IoT applications
 following the context where there are sensors and actuators and an application that performs
 the management of these smart objects through the network. The figure belows shows the IoT
 environment explored by this guide: the sensor detects the environment, the data is sent to
@@ -75,12 +75,12 @@ for actuators.</p>
                     In the <b>Application</b> layer, all transported data is processed; this is the data that reaches the users.</p>
 
                     <p>
-                        For the execution of this guide, the following environment configuration is required:
+                        For the execution of this guide, the following environment configuration is recommended:
                         <ul>
-                            <li>One or more sensors</li>
+                            <li>One or more IoT devices</li>
+                            <li>Network infrastructure</li>
                             <li>One or more actuators</li>
-                            <li>Application that will make the decisions and send the commands</li>
-                            <li>Energy meter, required in some tests of the subcharacteristic Resource Utilization</li>
+                            <li>Application that will make decisions and send commands</li>
                         </ul>
                     </p>
                 </div>

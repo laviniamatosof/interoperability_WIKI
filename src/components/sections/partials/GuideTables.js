@@ -94,7 +94,7 @@ const GuideTables = ({
                 <div className={innerClasses}>
                     <Tabs>
                         <TabList>
-                            <Tab>Caracteristc</Tab>
+                            <Tab>Characteristic</Tab>
                             <Tab>Characteristcs Correlations</Tab>
                             <Tab>Subcharacteristics</Tab>
                             <Tab>Properties</Tab>
@@ -104,7 +104,7 @@ const GuideTables = ({
                             <Tab>Suggested Tools</Tab>
                         </TabList>
 
-                        <TabPanel> {/* Performance Definitions */}
+                        <TabPanel> {}
                             <ul className="tab-panel-inner">
                                 {ReportService.getDefinitions().map(renderGuideCaracteristcDefinitions)}
                             </ul>
