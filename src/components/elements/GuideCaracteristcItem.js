@@ -22,7 +22,7 @@ const defaultProps = {
     property: '',
     addAction: () => {},
     
-    tag: 'guide-caracteristic-item',
+    tag: 'guide-characteristic-item',
     color: '',
     size: '',
     loading: false,
@@ -52,7 +52,7 @@ const GuideCaracteristcItem = ({
   const [impactedCount, setImpactedCount] = useState(data[property].filter(i => i.impacted).length);
 
   const classes = classNames(
-    'guide-caracteristic-item',
+    'guide-characteristic-item',
     className,
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider'

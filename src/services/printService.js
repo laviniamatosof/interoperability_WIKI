@@ -21,7 +21,7 @@ class PrintService {
             <hr></hr>
             {this._createsubcharacteristicSection()}
             <hr></hr>
-            {this._createCaracteristicSection()}
+            {this._createcharacteristicSection()}
             <hr></hr>
             {this._createCostBenefitSection()}
             <hr></hr>
@@ -83,13 +83,13 @@ class PrintService {
         </div>)
     }
 
-    _createCaracteristicSection() {
-        var caracteristicsList = reportService._Data.filter(c => reportService._checkIsUsedCaracteristic(c));
+    _createcharacteristicSection() {
+        var characteristicsList = reportService._Data.filter(c => reportService._checkIsUsedcharacteristic(c));
 
-        if (caracteristicsList.length > 0 ){
+        if (characteristicsList.length > 0 ){
             return (<div class="container">
                 {
-                    caracteristicsList.map(this._printCaracteristic, this)
+                    characteristicsList.map(this._printcharacteristic, this)
                 }
             </div>);
         } else {
@@ -130,13 +130,13 @@ class PrintService {
         }
     }
 
-    _printCaracteristic(caracteristic) {
-        let propertiesList = caracteristic.properties.filter(i => i.selected);
-        let testCasesList = caracteristic.testCases.filter(i => i.selected);
-        let metricsList = caracteristic.metrics.filter(i => i.selected);
+    _printcharacteristic(characteristic) {
+        let propertiesList = characteristic.properties.filter(i => i.selected);
+        let testCasesList = characteristic.testCases.filter(i => i.selected);
+        let metricsList = characteristic.metrics.filter(i => i.selected);
         
         return (<div>
-            <h2>{caracteristic.name}</h2>
+            <h2>{characteristic.name}</h2>
             <h3>Properties</h3>
             {propertiesList.map(this._printItem, this)}
             <h3>Test Cases</h3>

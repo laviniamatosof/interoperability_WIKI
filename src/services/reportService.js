@@ -31,8 +31,8 @@ class ReportService {
             if (item["type"] === "definitions") return this._addGeneric(item);
             if (item["type"] === "subcharacteristics") return this._addGeneric(item);
     
-            let caracteristic = this._Data.find(i => i.id === item.characteristics);
-            var selectedItem = caracteristic[item.type].find(i => i.id === item.id);
+            let characteristic = this._Data.find(i => i.id === item.characteristics);
+            var selectedItem = characteristic[item.type].find(i => i.id === item.id);
     
             selectedItem.selected = true;
             console.log('ReportService', `add: ${item.id}`)
@@ -62,8 +62,8 @@ class ReportService {
         {
             item["impactHander"](true);
 
-            var caracteristic = this.getItemById(item.characteristics);
-            if (caracteristic["impactHandler"]) caracteristic["impactHandler"](item);
+            var characteristic = this.getItemById(item.characteristics);
+            if (characteristic["impactHandler"]) characteristic["impactHandler"](item);
         }
     }
 
@@ -75,8 +75,8 @@ class ReportService {
         if (item["type"] === "definitions") return this._removeGeneric(item);
         if (item["type"] === "subcharacteristics") return this._removeGeneric(item);
 
-        let caracteristic = this._Data.find(i => i.id === item.characteristics);
-        var selectedItem = caracteristic[item.type].find(i => i.id === item.id);
+        let characteristic = this._Data.find(i => i.id === item.characteristics);
+        var selectedItem = characteristic[item.type].find(i => i.id === item.id);
         
         selectedItem.selected = false;
         console.log('ReportService', `remove: ${item.id}`);
@@ -116,16 +116,16 @@ class ReportService {
         return result;
     }
 
-    _checkIsUsedCaracteristic(caracteristic) {
+    _checkIsUsedcharacteristic(characteristic) {
         let hasProperties = false;
         let hasMetrics = false;
         let hasTestCases = false;
 
-        if (caracteristic.properties.find(p => p.selected))
+        if (characteristic.properties.find(p => p.selected))
             hasProperties = true;
-        if (caracteristic.metrics.find(p => p.selected))
+        if (characteristic.metrics.find(p => p.selected))
             hasMetrics = true;
-        if (caracteristic.testCases.find(p => p.selected))
+        if (characteristic.testCases.find(p => p.selected))
             hasTestCases = true;
 
         return hasProperties && hasMetrics && hasTestCases;
@@ -169,7 +169,7 @@ class ReportService {
     /**
      * 
      * @param {*} item to be added
-     * @returns 0 - can add, 1 - must select a caracteristic, 2 - must select a property
+     * @returns 0 - can add, 1 - must select a characteristic, 2 - must select a property
      */
     _checkAddValidation(item) {
         var characteristic = this.getItemById(item.characteristics);
@@ -366,13 +366,13 @@ class ReportService {
     }
 
     _createNotificationError(item, errorId) {
-        var caracteristic = this.getItemById(item.characteristics);
+        var characteristic = this.getItemById(item.characteristics);
 
         let message = "";
         if (errorId === 1) {
-            message = `You must selected '${caracteristic.name}' in first place.`;
+            message = `You must selected '${characteristic.name}' in first place.`;
         } else if (errorId === 2) {
-            message = `At least one property of ${caracteristic.name} must be selected before select a test case or a metric.`;
+            message = `At least one property of ${characteristic.name} must be selected before select a test case or a metric.`;
         }
 
         notificationService.showError(message);
