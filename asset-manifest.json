@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/interoperability_WIKI/static/css/main.46ba6d1b.css",
-    "main.js": "/interoperability_WIKI/static/js/main.235a193c.js",
-    "static/media/steps_Prancheta 2.png": "/interoperability_WIKI/static/media/steps_Prancheta 2.39ece5a6bfeda3bafb30.png",
+    "main.css": "/interoperability_WIKI/static/css/main.ccfa621a.css",
+    "main.js": "/interoperability_WIKI/static/js/main.dd54e203.js",
+    "static/media/steps_Prancheta 2.png": "/interoperability_WIKI/static/media/steps_Prancheta 2.f51c3e2a3abce7e33e72.png",
+    "static/media/steps_Prancheta 5.png": "/interoperability_WIKI/static/media/steps_Prancheta 5.299bd3efb516d4b11324.png",
+    "static/media/steps_Prancheta 8.png": "/interoperability_WIKI/static/media/steps_Prancheta 8.47184f8bf94a4c5da023.png",
+    "static/media/steps_Prancheta 7.png": "/interoperability_WIKI/static/media/steps_Prancheta 7.6ecb59148c8deb1dfc5c.png",
+    "static/media/steps_Prancheta 6.png": "/interoperability_WIKI/static/media/steps_Prancheta 6.7ba25f4588aec97fd1ce.png",
+    "static/media/steps_Prancheta 3.png": "/interoperability_WIKI/static/media/steps_Prancheta 3.104426cc2dac363dd8f9.png",
+    "static/media/steps_Prancheta 4.png": "/interoperability_WIKI/static/media/steps_Prancheta 4.b3ce7f6c49b9191cbb20.png",
+    "static/media/steps_Prancheta 9.png": "/interoperability_WIKI/static/media/steps_Prancheta 9.74f45d64ccb8ae24c189.png",
+    "static/media/steps_Prancheta 1.png": "/interoperability_WIKI/static/media/steps_Prancheta 1.3cfb340db41f8bfd4f4a.png",
     "static/media/eventos-iot-en.png": "/interoperability_WIKI/static/media/eventos-iot-en.005c85583b31bf8c87e7.png",
-    "static/media/steps_Prancheta 5.png": "/interoperability_WIKI/static/media/steps_Prancheta 5.3447e62d8b549beface0.png",
-    "static/media/steps_Prancheta 4.png": "/interoperability_WIKI/static/media/steps_Prancheta 4.375d743636219126d451.png",
-    "static/media/steps_Prancheta 6.png": "/interoperability_WIKI/static/media/steps_Prancheta 6.d7388ac544ed6fb3e384.png",
-    "static/media/steps_Prancheta 7.png": "/interoperability_WIKI/static/media/steps_Prancheta 7.3bc24cea54ce4c8579e8.png",
-    "static/media/steps_Prancheta 9.png": "/interoperability_WIKI/static/media/steps_Prancheta 9.429e0de0bd19e29f9c6c.png",
+    "static/media/steps_Prancheta 10.png": "/interoperability_WIKI/static/media/steps_Prancheta 10.c38faecdca05b78a59af.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/interoperability_WIKI/static/media/KaTeX_AMS-Regular.797708391f0380251e6c.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/interoperability_WIKI/static/media/KaTeX_Main-Regular.c13710b121e1ae9a9d2f.ttf",
-    "static/media/steps_Prancheta 1.png": "/interoperability_WIKI/static/media/steps_Prancheta 1.4ebd3b17b807dec67d3f.png",
-    "static/media/steps_Prancheta 3.png": "/interoperability_WIKI/static/media/steps_Prancheta 3.56ebfbeba038f10b6ff9.png",
-    "static/media/steps_Prancheta 8.png": "/interoperability_WIKI/static/media/steps_Prancheta 8.49bf0e110eadb26eefe0.png",
     "static/media/KaTeX_Main-Bold.ttf": "/interoperability_WIKI/static/media/KaTeX_Main-Bold.741b6dafa705c6d25b25.ttf",
-    "static/media/steps_Prancheta 10.png": "/interoperability_WIKI/static/media/steps_Prancheta 10.7fba0055812e080d2f84.png",
     "static/media/groups.png": "/interoperability_WIKI/static/media/groups.e170ffaef2b41a5edc7e.png",
     "static/media/KaTeX_Main-Italic.ttf": "/interoperability_WIKI/static/media/KaTeX_Main-Italic.3b2e2994b30e81862423.ttf",
     "static/media/KaTeX_Main-BoldItalic.ttf": "/interoperability_WIKI/static/media/KaTeX_Main-BoldItalic.bcbfc655023034502de4.ttf",
@@ -75,11 +75,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/interoperability_WIKI/static/media/KaTeX_Size3-Regular.d27d182ea833ec6cc72e.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/interoperability_WIKI/static/media/KaTeX_Size3-Regular.943a01ec6dae1a54fa8b.woff2",
     "index.html": "/interoperability_WIKI/index.html",
-    "main.46ba6d1b.css.map": "/interoperability_WIKI/static/css/main.46ba6d1b.css.map",
-    "main.235a193c.js.map": "/interoperability_WIKI/static/js/main.235a193c.js.map"
+    "main.ccfa621a.css.map": "/interoperability_WIKI/static/css/main.ccfa621a.css.map",
+    "main.dd54e203.js.map": "/interoperability_WIKI/static/js/main.dd54e203.js.map"
   },
   "entrypoints": [
-    "static/css/main.46ba6d1b.css",
-    "static/js/main.235a193c.js"
+    "static/css/main.ccfa621a.css",
+    "static/js/main.dd54e203.js"
   ]
 }
